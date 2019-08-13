@@ -48,13 +48,10 @@ void MsgQueue::enque(const char *msg) {
 	if(mDebug) {
 		printf("Enqueued : %s, count=%d\n", msg, mCount);
 	}
-	if(mCount == 1) {
-		pthread_mutex_unlock( &mMutexCount );
-		pthread_cond_broadcast( &mCondVarEnque );
-	} else {
-		pthread_mutex_unlock( &mMutexCount );
-	}
-		pthread_cond_broadcast( &mCondVarEnque );
+	pthread_mutex_unlock( &mMutexCount );
+
+	//pthread_cond_broadcast( &mCondVarEnque );
+	pthread_cond_signal( &mCondVarEnque );
 }
 
 const char * MsgQueue::deque() {
@@ -66,13 +63,10 @@ const char * MsgQueue::deque() {
 	if(mDebug) {
 		printf("Dequeued : %s, count=%d\n", msg, mCount);
 	}
-	if(mCount == mCap) {
-		pthread_mutex_unlock( &mMutexCount );
-		pthread_cond_broadcast( &mCondVarDeque );
-	} else {
-		pthread_mutex_unlock( &mMutexCount );
-	}
-		pthread_cond_broadcast( &mCondVarDeque );
+	pthread_mutex_unlock( &mMutexCount );
+
+	//pthread_cond_broadcast( &mCondVarDeque );
+	pthread_cond_signal( &mCondVarDeque );
 	return msg;
 }
 
