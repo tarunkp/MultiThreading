@@ -1,4 +1,8 @@
 // https://randu.org/tutorials/threads/
+// http://www.cs.kent.edu/~ruttan/sysprog/lectures/multi-thread/multi-thread.html
+// https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html
+
+// Create few independent threads and wait for them to finish in main().
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,6 +53,7 @@ int main(int argc, char **argv) {
 	// Block until all threads complete (pthread_join)
 	for (int i = 0; i < NUM_THREADS; ++i) {
 		pthread_join(thr[i], NULL);
+		//pthread_detach(thr[i]); 
 	}
 
 	// Use pthread_exit() to exit main thread without killing other threads.
