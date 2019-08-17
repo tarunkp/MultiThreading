@@ -34,3 +34,11 @@ a.out
 *.exe
 *.out
 *.app
+creatingThreads
+queueTests
+usingConditionVar
+usingMutex
+passingRefToThreads
+usingAtomic
+usingCondVar
+
