@@ -16,4 +16,7 @@ g++ -Wall -std=c++11 -pthread 4_usingAtomic.cpp -o usingAtomic
 g++ -Wall -std=c++11 -pthread 5_usingConditionVar.cpp -o usingCondVar
 ./usingCondVar
 
+g++ -Wall -std=c++11 -pthread threadSafeQueue.cpp threadSafeQueue_tests.cpp -o queueTests
+./queueTests
+
 
