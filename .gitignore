@@ -3,6 +3,7 @@
 
 # vim Swap file
 *.swp
+*.swo
 
 # Compiled Object files
 *.slo
@@ -41,4 +42,7 @@ usingMutex
 passingRefToThreads
 usingAtomic
 usingCondVar
+promiseAndFuture1
+promiseAndFuture2
+usingAsync
 
