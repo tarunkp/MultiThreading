@@ -16,6 +16,15 @@ g++ -Wall -std=c++11 -pthread 4_usingAtomic.cpp -o usingAtomic
 g++ -Wall -std=c++11 -pthread 5_usingConditionVar.cpp -o usingCondVar
 ./usingCondVar
 
+g++ -Wall -std=c++11 -pthread 6_promiseAndFuture1.cpp -o promiseAndFuture1
+./promiseAndFuture1
+
+g++ -Wall -std=c++11 -pthread 7_promiseAndFuture2.cpp -o promiseAndFuture2
+./promiseAndFuture2
+
+g++ -Wall -std=c++11 -pthread 8_usingAsync.cpp -o usingAsync
+./usingAsync
+
 g++ -Wall -std=c++11 -pthread threadSafeQueue.cpp threadSafeQueue_tests.cpp -o queueTests
 ./queueTests
 
