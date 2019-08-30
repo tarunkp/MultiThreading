@@ -25,7 +25,9 @@ g++ -Wall -std=c++11 -pthread 7_promiseAndFuture2.cpp -o promiseAndFuture2
 g++ -Wall -std=c++11 -pthread 8_usingAsync.cpp -o usingAsync
 ./usingAsync
 
+g++ -Wall -std=c++11 -pthread 9_packaged_task.cpp -o packaged_task
+./packaged_task
+
 g++ -Wall -std=c++11 -pthread threadSafeQueue.cpp threadSafeQueue_tests.cpp -o queueTests
 ./queueTests
-
 
