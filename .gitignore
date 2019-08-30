@@ -45,4 +45,7 @@ usingCondVar
 promiseAndFuture1
 promiseAndFuture2
 usingAsync
+packaged_task
+threadPoolTest
+
 
