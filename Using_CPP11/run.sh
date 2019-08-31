@@ -31,3 +31,7 @@ g++ -Wall -std=c++11 -pthread 9_packaged_task.cpp -o packaged_task
 g++ -Wall -std=c++11 -pthread threadSafeQueue.cpp threadSafeQueue_tests.cpp -o queueTests
 ./queueTests
 
+g++ -Wall -std=c++11 -pthread threadPool_test.cpp -o threadPoolTest
+./threadPoolTest
+
+
