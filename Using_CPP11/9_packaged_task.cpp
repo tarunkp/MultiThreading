@@ -4,9 +4,13 @@
 // If we use promise and future, then we will need to change the interface of the function to pass promise.
 // std::packaged_task let us use this function for asynchronous processing without modifying the function interface.
 //
-// std::packaged_task<> is a class template and represents an asynchronous task.
-// It encapsulates a shared state that stores the value returned or thrown exception by associated callback.
+// std::packaged_task<> is a callable class template (function object) and represents an asynchronous task.
+// It encapsulates a shared state that stores the value returned or thrown exception by associated function.
 // When std::packaged_task<> is called in a separate thread, it calls the associated function and stores the return value/exception in its internal shared state. This value can be accessed in other thread through associated std::future object.
+// 
+// In other words, packaged_task<> creates a wrapper arround the original function.
+// It also creates promiseObj internally and calls promiseObj.set_value() with the return value of the original function.
+// It provides futureObj using internal promiseObj.
 
 
 #include <iostream>
